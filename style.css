@@ -1,0 +1,68 @@
+
+
+
+* {
+    font-family: calibri;
+    background-color: #EDEDE3;
+}
+
+
+.heading {
+    padding-left: 300px;    
+}
+
+
+
+.flow{
+    padding-left: 300px;
+    width:550px;   
+    
+}
+
+#navright {    
+    float:right;
+    width:200px;
+    padding-right: 200px;
+    
+    
+}
+
+/*links*/
+.nextpagelink:hover {    
+    color:red;
+}
+
+.nextpagelink {    
+    color:blue;
+}
+
+
+
+/*images*/
+.screen {
+     
+  width:850px;
+  height: auto;
+}
+.chartsize {       
+    width:250px;    
+    height: auto;    
+}
+
+
+
+/*green highlight*/
+.highlight {
+   color:#008A2E;
+}
+
+
+
+
+
+
+
+
+
+
+
