@@ -10,7 +10,7 @@
  
  <nav id="navright">
    <a href="index.html">Home</a><br>
-   <a href="chartbasic.html">Chart Basics</a><br>
+   <a href="chartbasic.html">Overview</a><br>
    <a href="database.html">Connecting to Database</a> <br> 
    <a href="classesandcoding.html">Classes and Coding</a>  <br>
    <a href="addingtoproject.html">Adding to Projects</a>  <br> 
@@ -27,16 +27,24 @@
 <div class="flow">
    <h2>Embedding</h2>
   <p>
-   Now that we can create a Dasboard, we might want to add it to our existing project.
+   Now that we can create a Dasboard, in most scenarios we would want to add it to our existing project which is slightly different than
+   our previous example.
    Here's the code below.
   </p>
  <img class="screen" src="embed.jpg">
    
    <p>
-      It's almost the same code but with some tweeks.
+     It's almost the same code but with some tweeks.
+    <ul>
+        <li>
+     
       First, we have to include the PHP file that we created in the previous page, but remove the rendering section.
-      We also have to extend the EmbeddedDashboard class in our contructor definition.
+      </li>
+      We also have to extend the EmbeddedDashboard class in our contructor definition instead of the StandaloneDashboard.
+      Next, we need to link to three Javascript libraries and one CSS. In the body of the html, you just have to create an
+      instance of the class that you created in our example. Use the inherited method, renderEmbedded instead of renderStandalone.
       
+      </ul>
    </p>
    
 </div>

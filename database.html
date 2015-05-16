@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -10,7 +11,7 @@
  
   <nav id="navright">
    <a href="index.html">Home</a><br>
-   <a href="chartbasic.html">Chart Basics</a><br>
+   <a href="chartbasic.html">Overview</a><br>
    <a href="database.html">Connecting to Database</a> <br> 
    <a href="classesandcoding.html">Classes and Coding</a>  <br>
    <a href="addingtoproject.html">Adding to Projects</a>  <br> 
@@ -25,38 +26,40 @@
    </div>
  
 <div class="flow">
-  <p>Most of the value of a component comes with the interaction with a database.</p>
+  <p>If you ask me, most of the value of a component comes with the interaction with a database.</p>
   <p>
-   Using these dashboards or charts can give you the most up-to-date information in seconds.
-   Let's look at this briefly. My code below is one example of how to make the initial connection.
+   Using these dashboards can give you the most up-to-date information in seconds.
+   Let's look at this briefly. My code below is one example of how to make the initial connection to a MySQL database.
+   These functions below will be part of a RazorFlow Dashboard constructor function that we will create instances for.
    I will describe in the next section where to place this statement in the context of the classes.
   </p>
   
   <img class="screen" src="initialize.jpg">
    <p>
    Notice how we'r using <strong>$this</strong> to assign the open connection to. We'll be passing a Dashboard object into an
-   initializing function. I'll explain more of that in the next page.
+   initializing function. 
    </p>
-   <p>Yes, this isn't totally correct. I shoulld check to see if a connection was made, not hardcode password and
+   <p>Yes, this isn't totally correct. I should check to see if a connection was made, not hardcode password and
    usernames, but I'm keeping this example simple. The PHP PDO API is used here for the connection, but the older mySQLi
-   API can be used as well.      
+   API can be used as well. The arguments in order are <code>hostname, database name, username, password</code>.
    </p>
    <p>
       Next, we'll make our query to the database in an SQL statment.
       We'll fetch our data and assign it to the variable <strong>$query</strong>.
       Note that if you haven't populated your database with any values yet, you'll need to do that before we
       move on to the next page. I just populated a single table to test the functionality. If there's a lot of data in your selection criteria
-      being sent with the request, you want to limit your return records with a reasonable number to display such as <strong>LIMIT 7</strong>
-      added to the end of your statement.
+      being sent with the request, you will want to limit your return records with a reasonable number to display such as <code>SELECT * FROM customers LIMIT 7</code>
+      where 7 is the number of records wanted in your component.
    </p>
    <img class="screen" src="dbquery.jpg">
    <p>
-      This could be one of many queries to the database. For example, after the <strong>getSales ()</strong> function, we
-      might add in a <strong>getInventory()</strong> function and the a <strong>getWebsitehits()</strong> function. You'll need these
-      in the next section to put your data into your Dashboard, Chart, Table, etc.      
+      This could be one of many queries to the database. For example, after the <code>getSales ()</code> function, we
+      might add in a <code>getInventory()</code> function and the a <code>getWebsitehits()</code> function. You'll need these
+      in the next section to put your data into your Dashboard Component. The returned results assigned to a variable, as shown in the next
+      page.
    </p>
       
-      
+      <a class="nextpagelink" href="classesandcoding.html">Classes and Coding</a><br>
    
 </div>
   

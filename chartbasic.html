@@ -5,12 +5,13 @@
    <head>
    <meta charset="utf-8">
    <link rel="stylesheet" type="text/css" href="style.css">
+   <script language="javascript" type="text/javascript" src="charts.js"></script>
    </head>
  
  
   <nav id="navright">
    <a href="index.html">Home</a><br>
-   <a href="chartbasic.html">Chart Basics</a><br>
+   <a href="chartbasic.html">Overview</a><br>
    <a href="database.html">Connecting to Database</a> <br> 
    <a href="classesandcoding.html">Classes and Coding</a>  <br>
    <a href="addingtoproject.html">Adding to Projects</a>  <br> 
@@ -34,20 +35,27 @@
    </p>
    
    <h3>PHP Include File</h3>   
-   <p>
-   Only one file needs to be included at the top of your PHP file as seen below.<br>
-   I have the XAMPP standard package installed and using localhost for my server.I'm also showing the absolute path to the file for clarity.  
+   <p>Open up a blank PHP file and save it in a web server folder.
+   Only one file needs to be included at the top of your PHP file as seen below.<code> [razorflow.php] </code><br>
+   I have the <a href="https://www.apachefriends.org/download.html">XAMPP</a> standard package installed and using localhost for my server. I'm also showing the absolute path to the file for clarity.  
    </p>
    <img class="screen" src="include.jpeg"></img>
    
-   <h3>Components</h3>
-   <p>All visual representations of data are distingued as five categories,referenced as Components.
+   <h3>RazorFlow Components</h3>
+   <p>All visual representations of data are distingued as five categories, referenced as Components. You can pick any combination
+   of these to add to a Dashboard depending on your needs.This heiarchy was tricky for me to understand at first.<br>
+   Components are added to Dashboards, not the other way around. If you thought of the Dashboard as a pizza, components would be the toppings.
    <ul>
-      <li class="highlight">Chart Component</li>Just as it sounds.Pie, Bar Charts, Etc.
-      <li class="highlight">Form Component</li>User input forms.Text,Number,& Dropdowns.
-      <li class="highlight">Guage Component</li>Measuring one piece of data.An example would be 'Total Monthly Sales';
-      <li class="highlight">KPI Component</li>"Key Performance Indicators" Show current values (not very visual) of multiple important metrics.
-      <li class="highlight">Table Component</li>As expected, a nicely formatted table. Could be used to show record in a database.
+      <li class="highlight">Chart Component</li>Just as it sounds. Pie, Bar Charts, Etc.<br><br>
+      <img src="chart_pie.jpg"> 
+      <li class="highlight">Form Component</li>User input forms such as Text, Number, & Dropdowns.<br><br>
+      <img src="form.jpg">
+      <li class="highlight">Guage Component</li>Measuring one piece of data. An example would be 'Total Monthly Sales';<br><br>
+      <img src="gauge.jpg">
+      <li class="highlight">KPI Component</li>"Key Performance Indicators" - show current values of multiple important metrics.<br><br>
+      <img src="kpi_table.jpg">
+      <li class="highlight">Table Component</li>Formatted tables. This could be used to show records in a database.<br><br>
+      <img src="table.jpg">
    </ul>
    
       

@@ -9,7 +9,7 @@
  
    <nav id="navright">
    <a href="index.html">Home</a><br>
-   <a href="chartbasic.html">Chart Basics</a><br>
+   <a href="chartbasic.html">Overview</a><br>
    <a href="database.html">Connecting to Database</a> <br> 
    <a href="classesandcoding.html">Classes and Coding</a>  <br>
    <a href="addingtoproject.html">Adding to Projects</a>  <br> 
@@ -30,15 +30,14 @@
    types of output we can get, let's look at how we can extend the built in classes provided by the
    library.
    <ul>     
-      <li class="highlight">StandaloneDashboard</li>Default single wrapper
-      <li class="highlight">EmbeddedDashboard</li>Add to your existing HTML or PHP page.
-      <li class="highlight">TabbedDashboard</li>Dashboard is separated by a tab.
+      <li class="highlight">StandaloneDashboard</li>Default single wrapper. You would link to a separate PHP page to display.
+      <li class="highlight">EmbeddedDashboard</li>Add to your existing HTML or PHP page. Probably would using thi type the most.
+      <li class="highlight">TabbedDashboard</li>Multiple Dashboards are filed in tabs.This is either Embedded or StandAlone.
    </ul>
   </p>
   
    <h2>Components</h2>
-   <p>Compoents are what is attached to the dashboard.</br>
-      Component are one of the following:
+   <p>Compoents are what is attached to the dashboard.</br>     
       <ul>
          <li class="highlight">ChartComponent</li>
          <li class="highlight">FormComponent</li>
@@ -49,34 +48,35 @@
    </p>
   
  <p>
-   These three classes are extensions of a baseclass, Dashboard.
+   These three classes are extensions of the RazorFlow baseclass, Dashboard.
    We need to extend these classes as below:
    <img class="screen" src="extend.jpg">
-      <strong>SampleDashboard</strong> can be any name you choose but the original Razorflow class has
+      <strong>SampleDashboard</strong> can be any name you choose but extended RazorFlow class has
       to be one of the three above.
  </p>
  <h2>Final Code</h2>
  <img class="screen" src="complete.jpg">
-   <p>     
+   <p> Here's my entire sample code.<br>    
       We've already covered the Require statement, Class Extend, and the Database Portion.
      
       <h3>buildDashboard</h3>
-      This is where we add the details of the Component, which could be anyone of the ones mentioned above.
+      This is where we add the details of the Component, which could be any of the ones mentioned above.
       <ul>
-         <li>setDashoardTitle</li>Pick a string to describe the dashboard (not the component).
-         <li>new ChartComponent('c1')</li>Creates a new component. One of the list as stated above. You can choose the variable id ('c1')
-         of the component.You won't need to reference it in this example, but is needed on more advanced features such as drill-down capabilities.
-         <li>setCaption</li>Here's where you set the component title.
-         <li>setDimensions</li>Phyisical size of the Chart. This has nothing to do with how many records to dipslay.
-         <li>getSales()</li>this is where we run our database query and assign the results to the <strong>$top_customer</strong>object.
-         <li>setLabels</li>This names the X-axis in the chart. The built-in static method 'pluck utility' pulls out the column values in a record.
-         <li>addSeries</li>Here we actually add the data to the chart.First parameter is a unique id for the series that you choose.
-         Second parameter is the name that will be diplayed on the chart. Third is the data.
-         <li>addComponent</li>The chart is added to the component.        
+         <li class="highlight">setDashoardTitle</li>Pick a string to describe the dashboard (not the component).
+         <li class="highlight">new ChartComponent('c1')</li>Creates a new component of the above list. You can choose the variable id ('c1')
+         of the component.You won't need to reference it later in this coding example, but is needed on more advanced features such as drill-down capabilities.
+         <li class="highlight">setCaption</li>Here's where you set the component title.
+         <li class="highlight">setDimensions</li>Phyisical size of the Chart. This has nothing to do with how many records to display.
+         <li class="highlight">getSales()</li>This is where we run our database query and assign the results to the <code>$top_customer</code> object.
+         <li class="highlight">setLabels</li>This names the X-axis in the chart. The built-in static method 'pluck utility' pulls out the column values in a record.
+         In this example, I'm returning every Customers Units Year to Date.
+         <li class="highlight">addSeries</li>Here we actually add the data to the chart. First parameter is a unique id for the series that you choose.
+         Second parameter is the name that will be diplayed on the chart. Third is the data to populate.
+         <li class="highlight">addComponent</li>The Component is appended to the Dashboard.        
       </ul>
       <p>
-         Finally, we create an instance of the SampleDashboard class called $db.
-         The renderStandalone method creates the Dashboard and chart.
+         Finally, (outside of the constructor function), we create an instance of the SampleDashboard class called $db.  
+         The renderStandalone method creates the Dashboard with Component attached.
       </p>
       
       
@@ -84,7 +84,7 @@
    </p>
  
  
- 
+ <a class="nextpagelink" href="addingtoproject.html">Adding to your project</a><br>
    
 </div>
   
