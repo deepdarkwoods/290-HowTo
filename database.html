@@ -14,7 +14,8 @@
    <a href="chartbasic.html">Overview</a><br>
    <a href="database.html">Connecting to Database</a> <br> 
    <a href="classesandcoding.html">Classes and Coding</a>  <br>
-   <a href="addingtoproject.html">Adding to Projects</a>  <br> 
+   <a href="addingtoproject.html">Adding to Projects</a>  <br>
+   <a href="wrapup.html">Wrap-Up</a>  <br> 
    </nav>
  
    <div class="heading">
@@ -37,11 +38,14 @@
   <img class="screen" src="initialize.jpg">
    <p>
    Notice how we'r using <strong>$this</strong> to assign the open connection to. We'll be passing a Dashboard object into an
-   initializing function. 
+   initializing function. Don't worry, more on that later. 
    </p>
    <p>Yes, this isn't totally correct. I should check to see if a connection was made, not hardcode password and
    usernames, but I'm keeping this example simple. The PHP PDO API is used here for the connection, but the older mySQLi
-   API can be used as well. The arguments in order are <code>hostname, database name, username, password</code>.
+   API can be used as well. The arguments in order are <code>hostname, database name, username, password</code>.<br>
+   If you're having trouble connecting to your database, <a href="http://www.phpro.org/tutorials/Introduction-to-PHP-PDO.html#4">this </a>site
+   has a very nice reference for the PDO syntax with different databases.
+   
    </p>
    <p>
       Next, we'll make our query to the database in an SQL statment.
@@ -49,13 +53,13 @@
       Note that if you haven't populated your database with any values yet, you'll need to do that before we
       move on to the next page. I just populated a single table to test the functionality. If there's a lot of data in your selection criteria
       being sent with the request, you will want to limit your return records with a reasonable number to display such as <code>SELECT * FROM customers LIMIT 7</code>
-      where 7 is the number of records wanted in your component.
+      where 7 is the number of records wanted in your component. A quick SQL statement reference is located <a href="http://www.tutorialspoint.com/sql/sql-syntax.htm">here</a>.
    </p>
    <img class="screen" src="dbquery.jpg">
    <p>
       This could be one of many queries to the database. For example, after the <code>getSales ()</code> function, we
       might add in a <code>getInventory()</code> function and the a <code>getWebsitehits()</code> function. You'll need these
-      in the next section to put your data into your Dashboard Component. The returned results assigned to a variable, as shown in the next
+      in the next section to put your data into your Dashboard Component. The returned results are assigned to a variable, as shown in the next
       page.
    </p>
       

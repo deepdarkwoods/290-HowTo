@@ -12,7 +12,8 @@
    <a href="chartbasic.html">Overview</a><br>
    <a href="database.html">Connecting to Database</a> <br> 
    <a href="classesandcoding.html">Classes and Coding</a>  <br>
-   <a href="addingtoproject.html">Adding to Projects</a>  <br> 
+   <a href="addingtoproject.html">Adding to Projects</a>  <br>
+   <a href="wrapup.html">Wrap-Up</a>  <br> 
    </nav>
    
    <div class="heading">
@@ -31,21 +32,12 @@
    library.
    <ul>     
       <li class="highlight">StandaloneDashboard</li>Default single wrapper. You would link to a separate PHP page to display.
-      <li class="highlight">EmbeddedDashboard</li>Add to your existing HTML or PHP page. Probably would using thi type the most.
-      <li class="highlight">TabbedDashboard</li>Multiple Dashboards are filed in tabs.This is either Embedded or StandAlone.
+      <li class="highlight">EmbeddedDashboard</li>Add to your existing HTML or PHP page. Probably the most popular Dashboard to use.
+      <li class="highlight">TabbedDashboard</li>Multiple Dashboards are filed in tabs. This is either Embedded or StandAlone.
    </ul>
   </p>
   
-   <h2>Components</h2>
-   <p>Compoents are what is attached to the dashboard.</br>     
-      <ul>
-         <li class="highlight">ChartComponent</li>
-         <li class="highlight">FormComponent</li>
-         <li class="highlight">GuageComponent</li>
-         <li class="highlight">KPIComponent</li>
-         <li class="highlight">TableComponent</li>         
-      </ul>
-   </p>
+
   
  <p>
    These three classes are extensions of the RazorFlow baseclass, Dashboard.
@@ -56,27 +48,42 @@
  </p>
  <h2>Final Code</h2>
  <img class="screen" src="complete.jpg">
-   <p> Here's my entire sample code.<br>    
+   <p> Here's my entire sample code.   
       We've already covered the Require statement, Class Extend, and the Database Portion.
-     
-      <h3>buildDashboard</h3>
-      This is where we add the details of the Component, which could be any of the ones mentioned above.
+      
+      <h3>Code Explanation</h3>The complete ChartComponent methods reference is <a href="https://www.razorflow.com/docs/dashboard/php/api/ChartComponent.php">here</a>
+      and I'll give my summary.
       <ul>
-         <li class="highlight">setDashoardTitle</li>Pick a string to describe the dashboard (not the component).
-         <li class="highlight">new ChartComponent('c1')</li>Creates a new component of the above list. You can choose the variable id ('c1')
-         of the component.You won't need to reference it later in this coding example, but is needed on more advanced features such as drill-down capabilities.
-         <li class="highlight">setCaption</li>Here's where you set the component title.
-         <li class="highlight">setDimensions</li>Phyisical size of the Chart. This has nothing to do with how many records to display.
+      <li class="highlight">buildDashboard()</li>
+      This is where we add the details of the Component, which could be any of these below.      
+      <ul>
+         <li >ChartComponent</li>
+         <li >FormComponent</li>
+         <li >GuageComponent</li>
+         <li >KPIComponent</li>
+         <li >TableComponent</li>         
+      </ul>
+   </p>
+  
+      
+         <li class="highlight">setDashoardTitle()</li>Pick a string to describe the dashboard (not the component).
+         <li class="highlight">new ChartComponent()</li>Creates a new component of the above list. You can choose the variable id ('c1')
+         of the component. You won't need to reference it later in this coding example, but is needed on more advanced features such as drill-down capabilities.
+         <li class="highlight">setCaption()</li>Here's where you set the component title.
+         <li class="highlight">setDimensions()</li>Phyisical size of the Chart. This has nothing to do with how many records to display.
          <li class="highlight">getSales()</li>This is where we run our database query and assign the results to the <code>$top_customer</code> object.
-         <li class="highlight">setLabels</li>This names the X-axis in the chart. The built-in static method 'pluck utility' pulls out the column values in a record.
+         <li class="highlight">setLabels()</li>This names the X-axis in the chart. The built-in static method 'pluck utility' pulls out the column values in a record.
          In this example, I'm returning every Customers Units Year to Date.
-         <li class="highlight">addSeries</li>Here we actually add the data to the chart. First parameter is a unique id for the series that you choose.
+         <li class="highlight">addSeries()</li>Here we actually add the data to the chart. First parameter is a unique id for the series that you choose.
          Second parameter is the name that will be diplayed on the chart. Third is the data to populate.
-         <li class="highlight">addComponent</li>The Component is appended to the Dashboard.        
+         <li class="highlight">addComponent()</li>The Component is appended to the Dashboard.        
       </ul>
       <p>
          Finally, (outside of the constructor function), we create an instance of the SampleDashboard class called $db.  
-         The renderStandalone method creates the Dashboard with Component attached.
+         The renderStandalone method creates the Dashboard with Component attached.<br><br>
+         Here's the Final Dashboard.<br><br>
+         <img class="screen" src="firsttable.jpg">
+         
       </p>
       
       

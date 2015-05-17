@@ -13,7 +13,8 @@
    <a href="chartbasic.html">Overview</a><br>
    <a href="database.html">Connecting to Database</a> <br> 
    <a href="classesandcoding.html">Classes and Coding</a>  <br>
-   <a href="addingtoproject.html">Adding to Projects</a>  <br> 
+   <a href="addingtoproject.html">Adding to Projects</a>  <br>
+   <a href="wrapup.html">Wrap-Up</a>  <br> 
    </nav>
  
    <div class="heading">
@@ -29,24 +30,31 @@
   <p>
    Now that we can create a Dasboard, in most scenarios we would want to add it to our existing project which is slightly different than
    our previous example.
-   Here's the code below.
+   Here's the code below for your two files, the Dashboard and your application. My first file is named "embeddedDashboard.php".
   </p>
+<img class="screen" src="embeddb.jpg"><br><br>
  <img class="screen" src="embed.jpg">
    
    <p>
      It's almost the same code but with some tweeks.
     <ul>
+        <li>     
+        First, we have to include the PHP file that we created in the previous page, but remove the rendering section.<br>
+        <code>[$db = new SampleDashboard();]<br>[$db->renderStandalone();]</code>
+        </li>
         <li>
-     
-      First, we have to include the PHP file that we created in the previous page, but remove the rendering section.
-      </li>
-      We also have to extend the EmbeddedDashboard class in our contructor definition instead of the StandaloneDashboard.
-      Next, we need to link to three Javascript libraries and one CSS. In the body of the html, you just have to create an
-      instance of the class that you created in our example. Use the inherited method, renderEmbedded instead of renderStandalone.
+         We also have to extend the <strong>EmbeddedDashboard </strong>class in our constructor definition instead of the <strong>StandaloneDashboard</strong>.
+         Just change it in that one spot.
+        </li>
+        <li>
+        Next, we need to link to three Javascript libraries and one CSS. <br> <code>[razorflow.min.css] [jquery.min.js] [razorflow.wrapper.min.js] <br> [razorflow.devtools.min.js]-optional-</code>
+        </li>
+        
+         Use the inherited method, renderEmbedded instead of renderStandalone.
       
       </ul>
    </p>
-   
+    <a class="nextpagelink" href="Wrap-Up.html">Wrap-Up</a><br>
 </div>
   
   
