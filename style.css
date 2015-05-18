@@ -47,6 +47,22 @@
   border-style: solid;
  
 }
+
+.screen2 {
+     
+  width:500px;
+  height: auto;
+  border-style: solid;
+  display:block;
+ 
+}
+
+
+
+
+
+
+
 .chartsize {       
     width:350px;    
     height: auto;    

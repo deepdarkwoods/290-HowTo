@@ -26,9 +26,59 @@
    </div>
  
 <div class="flow">
-   <p>Now you should be able to add some basic Dashboards to your project. It doesn't take long at all once you get the basics down.</p>
+   <p>Now you should be able to add some basic Dashboards to your project. It doesn't take long at all once you get the basics down.
+   Here, I'll kinda go through a lightning round on answer some questions that I've seen on the forums.
+    
+   </p>
    
-   <h3>Advanced Features</h3>
+   
+   <h3>FAQ</h3>
+   <ul>
+    <li>How does the tabbed Dashboard work ?<br>
+        <code>
+            This is a cool feature, but I find that it doesn't make your site very readable. Your user has to make an extra click to get to the info.
+            Nevertheless, if needed, it' not very hard.<br><br>
+            Step 1: Create multiple extensions of the Dashboard class. [mypersonalDashbard extends Dashboard]<br>
+            Step 2: Create a TabbedDashboard Object.
+            Step 3: Add the multiple Dashboards to the Tabbed Dashboard.       
+        </code>
+        <img class="screen2" src="tabbed.jpg"><br>
+    </li>
+    <li>
+        How do I make a pie chart ?<br>
+        <code>
+            This is not hard to do, just hard to find in the documentation.<br>
+            Instead of calling the 'addSeries' method, you call the 'setPieValues' as shown <a href="https://www.razorflow.com/docs/dashboard/php/guide/components/chart/chart_basic.php">here</a>, midway
+            down the page.
+        </code>
+    </li>
+    <li>
+       How do you format numbers for a chart ?<br>
+       <code>
+        In the addComponent method, you can specify: <br>
+        'numberPrefix' => "$"<br>
+        'numberDecimalPoints' => 0 <br>
+        'numberSuffix' => "nd"<br>
+        'numberHumanize' => 'true', uses suffix K,M,B to denote thousand, million, billion<br>
+        
+       </code> 
+    </li>
+    <li>
+        How are muliple components layed out in a webpage?<br>        
+        <code>
+          The dashboard is rendered on a 12-column grid. Size is set with the setDimensions method.            
+        </code>        
+    </li>
+    <li>
+        What's different about the JavaScript Razorflow functionality?
+        <code>
+            You can have the same types of Dashboards and Components as the PHP library.<br>
+            Most of this is geared towards form data instead of databases.
+        </code>
+    </li>
+    
+    
+   </ul>
    
    
    
